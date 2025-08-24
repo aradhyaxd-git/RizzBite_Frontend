@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../assets/logo.svg';
 import { Github, LinkedinIcon } from 'lucide-react';
 
 const Footer = () => {
