@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
-import { Github, Linkedin } from 'lucide-react'; // Removed Twitter and Instagram
+import { Github, LinkedinIcon } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="mt-6 flex space-x-4">
               {/* Removed Twitter and Instagram links */}
               <a href="https://github.com/aradhyaxd-git" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github /></a>
-              <a href="https://www.linkedin.com/in/verma-aradhya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin /></a>
+              <a href="https://www.linkedin.com/in/verma-aradhya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><LinkedinIcon /></a>
             </div>
           </div>
           
