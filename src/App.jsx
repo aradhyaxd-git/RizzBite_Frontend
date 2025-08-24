@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage';   // <-- IMPORT
 import MyRecipesPage from './pages/MyRecipesPage';
 import AccountPage from './pages/AccountPage';
 import ScrollToTop from './components/utils/ScrollToTop';
+import MyRecipesPage from './pages/MyRecipesPage';
 function App() {
   return (
     // We wrap everything in a flex container that takes up the full screen height
@@ -30,6 +31,7 @@ function App() {
           <Route path="/my-recipes" element={<MyRecipesPage />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/scroll-to-top" element={<ScrollToTop />} />
+          <Route path="/my-recipes" element={<MyRecipesPage />} />
         </Routes>
       </main>
       <Footer />
