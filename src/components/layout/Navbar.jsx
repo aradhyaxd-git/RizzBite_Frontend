@@ -82,7 +82,27 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          {/* ... your existing mobile menu code ... */}
+          <div className="container mx-auto px-6 py-4 space-y-4">
+            <Link to="/features" className="block py-2 text-gray-600 hover:text-black transition-colors">Features</Link>
+            {currentUser && (
+              <Link to="/my-recipes" className="block py-2 text-gray-600 hover:text-black transition-colors">My Recipes</Link>
+            )}
+            <Link to="/mission" className="block py-2 text-gray-600 hover:text-black transition-colors">Our Mission</Link>
+            <Link to="/pricing" className="block py-2 text-gray-600 hover:text-black transition-colors">Pricing</Link>
+            
+            <div className="pt-4 border-t">
+              {currentUser ? (
+                <>
+                  <Link to="/account" className="block py-2 text-gray-600 hover:text-black transition-colors">Account</Link>
+                  <button onClick={handleLogout} className="block w-full text-left py-2 text-gray-600 hover:text-black transition-colors">
+                    Log Out
+                  </button>
+                </>
+              ) : (
+                <Link to="/signup" className="block py-2 text-gray-600 hover:text-black transition-colors">Sign Up</Link>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </header>

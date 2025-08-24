@@ -1,7 +1,7 @@
 
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
-import heroImage from '../assets/images/pannerTikka.jpg';
+import heroImage from '../assets/paneer.tikka.jpg';
 import { Wand2, ChevronRight } from 'lucide-react';
 import StrugglesSection from '../components/features/StrugglesSection';
 import FeaturesSection from '../components/features/FeaturesSection';

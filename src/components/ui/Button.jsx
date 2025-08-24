@@ -6,6 +6,7 @@ export const Button = ({ children, className = '', variant = 'primary', size = '
     const variants = {
       primary: 'bg-black text-white hover:bg-gray-800 focus:ring-black',
       outline: 'bg-transparent border border-gray-300 text-gray-800 hover:bg-gray-100 focus:ring-gray-400',
+      ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 hover:text-gray-900',
     };
 
     const sizes = {
