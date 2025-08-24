@@ -13,7 +13,7 @@ const ContactSection = () => {
           <p className="mt-4 max-w-2xl mx-auto">
             Stop guessing and start achieving. Get started with RizzBite for free and discover how easy healthy eating can be.
           </p>
-          {/* UPDATED BUTTON STYLE */}
+          {/* FINAL FIX for the button style */}
           <Button 
             onClick={() => navigate('/generator')}
             className="mt-8 bg-white text-purple-600 hover:bg-gray-200 font-bold px-8 py-3 text-base flex items-center gap-2 mx-auto"
