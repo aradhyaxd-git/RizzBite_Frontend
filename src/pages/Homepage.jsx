@@ -1,20 +1,21 @@
+
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import heroImage from '../assets/images/pannerTikka.jpg';
 import { Wand2, ChevronRight } from 'lucide-react';
 import StrugglesSection from '../components/features/StrugglesSection';
 import FeaturesSection from '../components/features/FeaturesSection';
+import HowItWorksSection from '../components/features/HowItWorksSection'; // <-- IMPORT NEW
 import TestimonialsSection from '../components/features/TestimonialsSection';
 import AnimatedSection from '../components/ui/AnimatedSection';
 
-const HomePage = () => {
+const Homepage = () => {
   const navigate = useNavigate();
 
   return (
     <main>
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-24 pb-32">
-        {/* Adjusted grid layout to give text more space */}
         <div className="grid lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3 text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight">
@@ -57,6 +58,11 @@ const HomePage = () => {
 
       <AnimatedSection>
         <FeaturesSection />
+      </AnimatedSection>
+      
+      {/* ADD THE NEW SECTION HERE */}
+      <AnimatedSection>
+        <HowItWorksSection />
       </AnimatedSection>
       
       <TestimonialsSection />
