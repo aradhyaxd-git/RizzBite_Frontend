@@ -5,6 +5,7 @@ import { Wand2, ChevronRight } from 'lucide-react';
 import StrugglesSection from '../components/features/StrugglesSection';
 import FeaturesSection from '../components/features/FeaturesSection';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import TestimonialsSection from '../components/features/TestimonialsSection';
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -57,6 +58,10 @@ const Homepage = () => {
       {/* Features Section with Animation */}
       <AnimatedSection>
         <FeaturesSection />
+      </AnimatedSection>
+      
+      <AnimatedSection>
+        <TestimonialsSection />
       </AnimatedSection>
     </main>
   );
