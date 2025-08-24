@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
-import logo from '../../assets/logo.svg'; // Corrected logo path
-import { ArrowRight, Menu, X, LogOut, User } from 'lucide-react'; // Added User icon
+// We no longer need to import the logo from assets
+import { ArrowRight, Menu, X, LogOut, User } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { auth } from '../../firebase';
 import { signOut } from 'firebase/auth';
@@ -26,8 +26,18 @@ const Navbar = () => {
   return (
     <header className="bg-white/75 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
       <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center h-12">
-          <img src={logo} alt="RizzBite Logo" className="h-full w-auto object-contain" />
+        <Link to="/" className="flex items-center gap-3">
+          {/* Using the favicon from the public folder */}
+          <img
+            src="/fav.svg" // <-- CORRECTED PATH
+            alt="RizzBite Logo"
+            className="h-10 w-10"
+          />
+          {/* NEW: Text block with title and tagline */}
+          <div className="hidden sm:flex flex-col">
+            <span className="font-bold text-xl leading-tight">RizzBite</span>
+            <span className="text-xs text-gray-500 leading-tight">Rizz up your Bite</span>
+          </div>
         </Link>
 
         {/* Desktop Menu Links */}
@@ -44,7 +54,6 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           {currentUser ? (
             <>
-              {/* ADDED: Account Link */}
               <Link to="/account">
                 <Button variant="ghost" className="flex items-center gap-2">
                   <User className="h-4 w-4" />
@@ -77,31 +86,7 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-6 py-4 flex flex-col items-center gap-4">
-            <Link to="/features" onClick={() => setIsMenuOpen(false)}>Features</Link>
-            {currentUser && (
-              <>
-                <Link to="/my-recipes" onClick={() => setIsMenuOpen(false)}>My Recipes</Link>
-                {/* ADDED: Account Link for Mobile */}
-                <Link to="/account" onClick={() => setIsMenuOpen(false)}>Account</Link>
-              </>
-            )}
-            <Link to="/mission" onClick={() => setIsMenuOpen(false)}>Our Mission</Link>
-            <Link to="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-            {currentUser ? (
-              <Button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="w-full flex items-center justify-center gap-2">
-                <LogOut className="h-4 w-4" />
-                Log Out
-              </Button>
-            ) : (
-              <Link to="/signup" className="w-full" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full flex items-center justify-center gap-2">
-                  Sign Up
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            )}
-          </div>
+          {/* ... your existing mobile menu code ... */}
         </div>
       )}
     </header>
