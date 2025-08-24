@@ -26,8 +26,8 @@ const Navbar = () => {
   return (
     <header className="bg-white/75 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
       <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="RizzBite Logo" className="h-12" />
+        <Link to="/" className="flex items-center h-12">
+          <img src={logo} alt="RizzBite Logo" className="h-full w-auto object-contain" />
         </Link>
 
         {/* Desktop Menu Links */}
