@@ -2,7 +2,7 @@
 
 export const generateRecipe = async ({ goal, ingredients }) => {
     // Call our local backend server
-    const response = await fetch('http://localhost:5000/api/generate', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
