@@ -8,6 +8,10 @@ import FeaturesSection from '../components/features/FeaturesSection';
 import HowItWorksSection from '../components/features/HowItWorksSection'; // <-- IMPORT NEW
 import TestimonialsSection from '../components/features/TestimonialsSection';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import ContactSection from '../components/features/ContactSection';
+import FaqSection from '../components/features/FaqSection';
+
+
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -66,6 +70,8 @@ const Homepage = () => {
       </AnimatedSection>
       
       <TestimonialsSection />
+      <FaqSection />
+      <ContactSection />
     </main>
   );
 };
