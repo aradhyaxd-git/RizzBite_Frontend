@@ -1,9 +1,6 @@
-// File: src/components/layout/Navbar.jsx
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
-// We no longer need to import the logo from assets
 import { ArrowRight, Menu, X, LogOut, User } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { auth } from '../../firebase';
@@ -25,23 +22,22 @@ const Navbar = () => {
 
   return (
     <header className="bg-white/75 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
-      <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          {/* Using the favicon from the public folder */}
+      {/* Increased height to h-24 for more presence */}
+      <nav className="container mx-auto px-6 h-24 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-4">
           <img
-            src="/fav.svg" // <-- CORRECTED PATH
+            src="/fav.svg"
             alt="RizzBite Logo"
-            className="h-10 w-10"
+            className="h-12 w-12" // Increased logo size
           />
-          {/* NEW: Text block with title and tagline */}
           <div className="hidden sm:flex flex-col">
-            <span className="font-bold text-xl leading-tight">RizzBite</span>
-            <span className="text-xs text-gray-500 leading-tight">Rizz up your Bite</span>
+            <span className="font-bold text-2xl leading-tight">RizzBite</span> 
+            <span className="text-sm text-gray-500 leading-tight">Rizz up your Bite</span>
           </div>
         </Link>
 
-        {/* Desktop Menu Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        {/* Increased font size and spacing */}
+        <div className="hidden md:flex items-center gap-10 text-base font-medium text-gray-600">
           <Link to="/features" className="hover:text-black transition-colors">Features</Link>
           {currentUser && (
             <Link to="/my-recipes" className="hover:text-black transition-colors">My Recipes</Link>
