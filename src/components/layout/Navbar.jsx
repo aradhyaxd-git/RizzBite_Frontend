@@ -5,6 +5,7 @@ import { ArrowRight, Menu, X, LogOut, User } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { auth } from '../../firebase';
 import { signOut } from 'firebase/auth';
+import logo from '../../assets/logo.svg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = () => {
       <nav className="container mx-auto px-6 h-24 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-4">
           <img
-            src="/fav.svg"
+            src={logo}
             alt="RizzBite Logo"
             className="h-12 w-12" // Increased logo size
           />
